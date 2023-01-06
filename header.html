@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>aespa</title>
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+<script>
+$(document).ready(function(){	
+	//창넓이가 1200픽셀 미만이면 이미지 높이 값을 부모창에 넘겨준다.
+	if( $(window).innerWidth()<1200 ){
+		//const x = $("img").eq(0).height();
+		const x = $("img").height();
+		//console.log(x);		
+		$("#header", parent.document).height(x);		
+	}
+	
+});////끝
+</script>
+<style>
+* {padding:0; margin:auto; box-sizing:border-box;}
+/*body {overflow:hidden;}*/
+img {display:block; max-width:100%;}
+nav {display:flex; background:#616566; height:100px;}
+a {transition:0.5s;}
+a:hover {transform:translateY(-10px);}
+</style>
+</head>
+<body>
+		<header>
+			<nav>
+			    <a href="index.html" target="_parent"> <img src="images/logo.png" alt="로고"></a>
+				<a href="goods.html" target="_parent"><img src="images/goods.png" alt="굿즈"></a>
+				<a href="about.html" target="_parent"><img src="images/about.png" alt="about"></a>
+				<a href="member.html" target="_parent"><img src="images/mem.png" alt="member"></a>
+				<a href="album.html" target="_parent"><img src="images/album.png" alt="album"></a>
+				<a href="broad.html" target="_parent"><img src="images/br.png" alt="br"></a>
+			</nav>
+		</header>
+</body>
+</html>

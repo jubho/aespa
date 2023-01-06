@@ -1,0 +1,49 @@
+@charset "utf-8";
+
+* {margin:0; padding:0; box-sizing:border-box;}
+img {display:block; max-width:100%;  }
+
+html,body {
+	font-family: 'Noto Sans KR', sans-serif; color:#000000;
+}
+
+#layout {max-width:1200px; margin:auto;}
+
+/*상단*/
+#header {
+	width:100%; display:block; border:none; max-width:1500px;
+	height:100px; position:relative; z-index:1;
+	
+}
+iframe {width:1200px; height:720px; border:0;  }
+/*첫화면*/
+#index main {position:relative;}
+
+#index img:not(:first-child) {position:absolute;
+top:0;}
+
+/*굿즈페이지*/
+#goods main {display:flex; flex-wrap:wrap;
+justify-content:space-around; } 
+
+#goods main>div {border:0px solid red; display:flex; flex-wrap:wrap;}
+
+#goods section { 
+	position:relative;  height:333px;
+	overflow:hidden; margin-bottom:20px;
+}
+
+#goods section div { 
+	position:absolute; width:100%;
+	background:#616566; top:333px;
+	padding:15px; color:white;
+	transition:0.5s;
+}
+#goods section:hover div {top:80%;}
+#goods p {font-size:1rem;}
+
+/*하단*/
+#footer {
+	display:block; width:100%; height:100%;
+	border:none;
+}
